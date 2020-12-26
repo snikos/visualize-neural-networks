@@ -158,6 +158,7 @@ function updateNet(){
 	let gripArray = [];
 	let circleArray = [];
 	let triangleArray = [];
+
     groupCirc.selectAll('circle')
 	    .data(curArr, data => data)
 	    .join('circle')
@@ -199,8 +200,7 @@ function updateNet(){
 	    })
 	    //.attr('fill', (data) => data.color);
 
-
-	groupCirc.selectAll('circle').exit().remove();
+	    groupCirc.selectAll('circle').exit().remove();
 
 	updateGrip(gripArray);
 	//updateLight(lightArray);
