@@ -1,10 +1,10 @@
-# visualize-neural-networks
+## visualize-neural-networks
 Visualization neural networks
 
-# DEMO
-snikos.github.io/visualize-neural-networks
+### DEMO
+https://snikos.github.io/visualize-neural-networks
 
-# TOOLS
+### TOOLS
 
 - https://github.com/d3
 - https://asimovinstitute.org
