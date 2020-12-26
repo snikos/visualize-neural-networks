@@ -1,0 +1,78 @@
+section{
+	padding: 1em;
+	outline: 1px solid #ccc;
+}
+
+.snw{
+  display: block;
+  margin: 0 auto;
+}
+.textType{
+  font-size: 14px;
+  /*font-family: fangsong, system-ui, ui-rounded;*/
+  vertical-align: middle;
+  padding-left: 6px;
+  font-weight: 500;
+}
+.svgLoader ul{
+  max-height: 238px;
+  overflow-y: auto;
+  padding: 6px 0;
+  margin: 6px auto;
+  position: relative;
+}
+.svgLoader ul:before,
+.svgLoader ul:after{
+  background-color: rgba(255,255,255,0.75);
+  content: "";
+  display: block;
+  height: 8px;
+  position: sticky;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 10;
+  min-height: 8px;
+}
+.svgLoader ul:before{
+  top: -8px;
+}
+.svgLoader ul:after{
+  bottom: -10px;
+}
+.svgLoader li{
+  border-color : transparent;
+}
+.svgLoader .active{
+  color: #fff!important;
+}
+#listTypes{
+  display: block;
+}
+#listTypes li{
+  float: left;
+  width: 300px;
+}
+
+@media (max-width: 1199.98px) {
+  #listTypes li{
+    width: 25%;
+  }
+}
+@media (max-width: 991.98px) {
+  #listTypes li{
+    width: 33.3%;
+  }
+}
+@media (max-width: 767.98px) {
+  #listTypes li{
+    width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  #listTypes li{
+    float: none;
+    width: 100%;
+  }
+}

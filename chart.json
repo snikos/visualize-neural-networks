@@ -1,0 +1,521 @@
+{
+	"typesNN": [
+	    {"title": "Backfed input cell", "type": "typeCircle", "color": "#f1c605"},
+	    {"title": "Input cell", "type": "-", "color": "#f1c605"},
+	    {"title": "Noisy input cell", "type": "typeTriangle", "color": "#f1c605"},
+	    {"title": "Hidden cell", "type": "-", "color": "#6cc805"},
+	    {"title": "Probablistic hidden cell", "type": "typeCircle", "color": "#6cc805"},
+	    {"title": "Spiking hidden cell", "type": "typeTriangle", "color": "#6cc805"},
+	    {"title": "Output cell", "type": "-", "color": "#fe6500"},
+	    {"title": "Match input output cell", "type": "typeCircle", "color": "#fe6500"},
+	    {"title": "Recurrent cell", "type": "-", "color": "#0298f7"},
+	    {"title": "Memory cell", "type": "typeCircle", "color": "#0298f7"},
+	    {"title": "Different memory cell", "type": "typeTriangle", "color": "#0298f7"},
+	    {"title": "Kernel", "type": "-", "color": "#fe9bf6"},
+	    {"title": "Convolution or pool", "type": "typeCircle", "color": "#fe9bf6"}
+	],
+	"chart0": [
+		{"cx": 140, "cy": 80, "arrLine":["180:100"], "title": "Perceptron(P)", "type": "t_1"},
+		{"cx": 140, "cy": 120, "arrLine":["180:100"], "type": "t_1"},
+		{"cx": 180, "cy": 100, "type": "t_6"}
+	],
+	"chart1": [
+		{"cx": 120, "cy": 80, "arrLine":["160:80", "160:120"], "type": "t_1", "title": "Feed Forward(FF)"},
+		{"cx": 120, "cy": 120, "arrLine":["160:80", "160:120"], "type": "t_1"},
+		{"cx": 160, "cy": 80, "arrLine":["200:100"], "type": "t_3"},
+		{"cx": 160, "cy": 120, "arrLine":["200:100"], "type": "t_3"},
+		{"cx": 200, "cy": 100, "color": "#fe6500", "type": "t_6"}
+	],
+	"chart2": [
+		{"cx": 120, "cy": 80, "arrLine":["160:80", "160:120"], "type": "t_1", "title": "Radial Basis Network(RBF)"},
+		{"cx": 120, "cy": 120, "arrLine":["160:80", "160:120"], "type": "t_1"},
+		{"cx": 160, "cy": 80, "arrLine":["200:100"], "type": "t_3"},
+		{"cx": 160, "cy": 120, "arrLine":["200:100"], "type": "t_3"},
+		{"cx": 200, "cy": 100, "type": "t_6"}
+	],
+	"chart3": [
+	    {"cx": 100, "cy": 60, "arrLine": ["140:40","140:80","140:120","140:160"], "type": "t_1", "title": "Deep Feed Forward(DFF)"},
+	    {"cx": 100, "cy": 100, "arrLine": ["140:40","140:80","140:120","140:160"], "type": "t_1"},
+	    {"cx": 100, "cy": 140, "arrLine": ["140:40","140:80","140:120","140:160"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 40, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_3"},
+	    {"cx": 140, "cy": 80, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_3"},
+	    {"cx": 140, "cy": 120, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_3"},
+	    {"cx": 140, "cy": 160, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_3"},
+
+	    {"cx": 180, "cy": 40, "arrLine": ["220:80","220:120"], "type": "t_3"},
+	    {"cx": 180, "cy": 80, "arrLine": ["220:80","220:120"], "type": "t_3"},
+	    {"cx": 180, "cy": 120, "arrLine": ["220:80","220:120"], "type": "t_3"},
+	    {"cx": 180, "cy": 160, "arrLine": ["220:80","220:120"], "type": "t_3"},
+
+	    {"cx": 220, "cy": 80, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 120, "arrLine": [], "type": "t_6"}
+	],
+	"chart4": [
+	    {"cx": 100, "cy": 60, "arrLine": ["140:60","140:100","140:140"], "type": "t_1", "title": "Recurrent Neural Network (RNN)"},
+	    {"cx": 100, "cy": 100, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+	    {"cx": 100, "cy": 140, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 60, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeGrip"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeGrip"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeGrip"},
+
+	    {"cx": 180, "cy": 60, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeGrip"},
+	    {"cx": 180, "cy": 100, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeGrip"},
+	    {"cx": 180, "cy": 140, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeGrip"},
+
+	    {"cx": 220, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 140, "arrLine": [], "type": "t_6"}
+	],
+	"chart5": [
+	    {"cx": 100, "cy": 60, "arrLine": ["140:60","140:100","140:140"], "type": "t_1", "title": "Long / Short Term Memory (LSTM)"},
+	    {"cx": 100, "cy": 100, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+	    {"cx": 100, "cy": 140, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 60, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+
+	    {"cx": 180, "cy": 60, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+	    {"cx": 180, "cy": 100, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+	    {"cx": 180, "cy": 140, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeCircle typeGrip"},
+
+	    {"cx": 220, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 140, "arrLine": [], "type": "t_6"}
+	],
+	"chart6": [
+	    {"cx": 100, "cy": 60, "arrLine": ["140:60","140:100","140:140"], "type": "t_1", "title": "Gated Recurrent Unit(GRU)"},
+	    {"cx": 100, "cy": 100, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+	    {"cx": 100, "cy": 140, "arrLine": ["140:60","140:100","140:140"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 60, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:60","180:100","180:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+
+	    {"cx": 180, "cy": 60, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+	    {"cx": 180, "cy": 100, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+	    {"cx": 180, "cy": 140, "arrLine": ["220:60","220:100","220:140"], "type": "t_8", "typeSign": "typeTriangle typeGrip"},
+
+	    {"cx": 220, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 220, "cy": 140, "arrLine": [], "type": "t_6"}
+	],
+	"chart7": [
+	    {"cx": 120, "cy": 40, "arrLine": ["160:80","160:120"], "type": "t_1", "title": "Auto Encoder (AE)"},
+	    {"cx": 120, "cy": 80, "arrLine": ["160:80","160:120"], "type": "t_1"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:120"], "type": "t_1"},
+	    {"cx": 120, "cy": 160, "arrLine": ["160:80","160:120"], "type": "t_1"},
+
+	    {"cx": 160, "cy": 80, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 40, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 160, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart8": [
+	    {"cx": 120, "cy": 40, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1", "title": "Variational AE(VAE)"},
+	    {"cx": 120, "cy": 80, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1"},
+	    {"cx": 120, "cy": 160, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1"},
+
+        {"cx": 160, "cy": 40, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3", "typeSign": "typeCircle"},
+
+	    {"cx": 200, "cy": 40, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 160, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart9": [
+	    {"cx": 120, "cy": 40, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1", "typeSign": "typeTriangle",  "title": "Denoising AE(DAE)"},
+	    {"cx": 120, "cy": 80, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1","typeSign": "typeTriangle"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1", "typeSign": "typeTriangle"},
+	    {"cx": 120, "cy": 160, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1", "typeSign": "typeTriangle"},
+
+        {"cx": 160, "cy": 40, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 40, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 160, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart10": [
+	    {"cx": 120, "cy": 80, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1", "title": "Sparse AE (SAE)"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:40","160:80","160:120","160:160"], "type": "t_1"},
+
+        {"cx": 160, "cy": 40, "arrLine": ["200:80","200:120"], "type": "t_3"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:80","200:120"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:80","200:120"], "type": "t_3"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:80","200:120"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart11": [
+	    {"cx": 100, "cy": 100, "arrLine": ["120:60","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle", "title": "Markov Chain (MC)"},
+	    {"cx": 120, "cy": 60, "arrLine": ["100:100","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 140, "arrLine": ["100:100","120:60","160:40","160:160","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 40, "arrLine": ["100:100","120:60","120:140","160:160","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["100:100","120:60","120:140","160:40","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 60, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 140, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:60","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"}
+	],
+	"chart12": [
+	    {"cx": 100, "cy": 100, "arrLine": ["120:60","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle", "title": "Hopfield Network (HN)"},
+	    {"cx": 120, "cy": 60, "arrLine": ["100:100","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 140, "arrLine": ["100:100","120:60","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 40, "arrLine": ["100:100","120:60","120:140","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["100:100","120:60","120:140","160:40","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 60, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 140, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:60","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_0", "typeSign": "typeCircle"}
+	],
+	"chart13": [
+	    {"cx": 100, "cy": 100, "arrLine": ["120:60","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle", "title": "Boltzmann Macine (BM)"},
+	    {"cx": 120, "cy": 60, "arrLine": ["100:100","120:140","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 140, "arrLine": ["100:100","120:60","160:40","160:160","200:60","200:140","220:100"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 40, "arrLine": ["100:100","120:60","120:140","160:160","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["100:100","120:60","120:140","160:40","200:60","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 60, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:140","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 140, "arrLine": ["100:100","120:60","120:140","160:40","160:160","200:60","220:100"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"}
+	],
+	"chart14":[
+	    {"cx": 140, "cy": 60, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_0", "typeSign": "typeCircle", "title": "Restricted BM (RBM)"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:40","180:80","180:120","180:160"], "type": "t_0", "typeSign": "typeCircle"},
+
+	    {"cx": 180, "cy": 40, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 180, "cy": 80, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 180, "cy": 120, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 180, "cy": 160, "arrLine": [], "type": "t_4", "typeSign": "typeCircle"}
+	],
+	"chart15": [
+	    {"cx": 40, "cy": 40, "arrLine": ["80:80","80:120"], "type": "t_0", "typeSign": "typeCircle", "title": "Deep Belieff Network (DBN)"},
+	    {"cx": 40, "cy": 80, "arrLine": ["80:80","80:120"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 40, "cy": 120, "arrLine": ["80:80","80:120"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 40, "cy": 160, "arrLine": ["80:80","80:120"], "type": "t_0", "typeSign": "typeCircle"},
+
+	    {"cx": 80, "cy": 80, "arrLine": ["120:40","120:80","120:120","120:160"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 80, "cy": 120, "arrLine": ["120:40","120:80","120:120","120:160"], "type": "t_4", "typeSign": "typeCircle"},
+
+	    {"cx": 120, "cy": 40, "arrLine": ["160:80","160:120"], "type": "t_3"},
+	    {"cx": 120, "cy": 80, "arrLine": ["160:80","160:120"], "type": "t_3"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:120"], "type": "t_3"},
+	    {"cx": 120, "cy": 160, "arrLine": ["160:80","160:120"], "type": "t_3"},
+
+	    {"cx": 160, "cy": 80, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:40","200:80","200:120","200:160"], "type": "t_4", "typeSign": "typeCircle"},
+
+	    {"cx": 200, "cy": 40, "arrLine": ["240:80","240:120"], "type": "t_3"},
+	    {"cx": 200, "cy": 80, "arrLine": ["240:80","240:120"], "type": "t_3"},
+	    {"cx": 200, "cy": 120, "arrLine": ["240:80","240:120"], "type": "t_3"},
+	    {"cx": 200, "cy": 160, "arrLine": ["240:80","240:120"], "type": "t_3"},
+
+	    {"cx": 240, "cy": 80, "arrLine": ["280:40","280:80","280:120","280:160"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 240, "cy": 120, "arrLine": ["280:40","280:80","280:120","280:160"], "type": "t_4", "typeSign": "typeCircle"},
+
+	    {"cx": 280, "cy": 40, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 280, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 280, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 280, "cy": 160, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart16": [
+	    {"cx": 20, "cy": 20, "arrLine": ["60:20","60:60"], "type": "t_1", "title": "Deep Convolutional Network (DCN)"},
+	    {"cx": 20, "cy": 60, "arrLine": ["60:20","60:60","60:100"], "type": "t_1"},
+	    {"cx": 20, "cy": 100, "arrLine": ["60:60","60:100","60:140"], "type": "t_1"},
+	    {"cx": 20, "cy": 140, "arrLine": ["60:100","60:140","60:180"], "type": "t_1"},
+	    {"cx": 20, "cy": 180, "arrLine": ["60:140","60:180"], "type": "t_1"},
+
+	    {"cx": 60, "cy": 20, "arrLine": ["100:40"], "type": "t_11"},
+	    {"cx": 60, "cy": 60, "arrLine": ["100:40","100:80"], "type": "t_11"},
+	    {"cx": 60, "cy": 100, "arrLine": ["100:80","100:120"], "type": "t_11"},
+	    {"cx": 60, "cy": 140, "arrLine": ["100:120","100:160"], "type": "t_11"},
+	    {"cx": 60, "cy": 180, "arrLine": ["100:160"], "type": "t_11"},
+
+	    {"cx": 100, "cy": 40, "arrLine": ["140:60"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 100, "cy": 80, "arrLine": ["140:60","140:100"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 100, "cy": 120, "arrLine": ["140:100","140:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 100, "cy": 160, "arrLine": ["140:140"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 140, "cy": 60, "arrLine": ["180:80"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:80","180:120"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:120"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 180, "cy": 80, "arrLine": ["220:40","220:80","220:120","220:160"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 180, "cy": 120, "arrLine": ["220:40","220:80","220:120","220:160"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 220, "cy": 40, "arrLine": ["260:40","260:80","260:120","260:160"], "type": "t_3"},
+	    {"cx": 220, "cy": 80, "arrLine": ["260:40","260:80","260:120","260:160"], "type": "t_3"},
+	    {"cx": 220, "cy": 120, "arrLine": ["260:40","260:80","260:120","260:160"], "type": "t_3"},
+	    {"cx": 220, "cy": 160, "arrLine": ["260:40","260:80","260:120","260:160"], "type": "t_3"},
+
+	    {"cx": 260, "cy": 40, "arrLine": ["300:60","300:100","300:140"], "type": "t_3"},
+	    {"cx": 260, "cy": 80, "arrLine": ["300:60","300:100","300:140"], "type": "t_3"},
+	    {"cx": 260, "cy": 120, "arrLine": ["300:60","300:100","300:140"], "type": "t_3"},
+	    {"cx": 260, "cy": 160, "arrLine": ["300:60","300:100","300:140"], "type": "t_3"},
+
+	    {"cx": 300, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 300, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 300, "cy": 140, "arrLine": [], "type": "t_6"}
+	],
+	"chart17":[
+	    {"cx": 80, "cy": 80, "arrLine": ["120:60","120:100"], "type": "t_1", "title": "Deconvolutional Network (DN)"},
+	    {"cx": 80, "cy": 120, "arrLine": ["120:100","120:140"], "type": "t_1"},
+
+	    {"cx": 120, "cy": 60, "arrLine": ["160:40","160:80"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 100, "arrLine": ["160:80","160:120"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 140, "arrLine": ["160:120","160:160"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 160, "cy": 40, "arrLine": ["200:20","200:60"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:60","200:100"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:100","200:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:140","200:180"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 200, "cy": 20, "arrLine": ["240:20","240:60"], "type": "t_11"},
+	    {"cx": 200, "cy": 60, "arrLine": ["240:20","240:60","240:100"], "type": "t_11"},
+	    {"cx": 200, "cy": 100, "arrLine": ["240:60","240:100","240:140"], "type": "t_11"},
+	    {"cx": 200, "cy": 140, "arrLine": ["240:100","240:140","240:180"], "type": "t_11"},
+	    {"cx": 200, "cy": 180, "arrLine": ["240:140","240:180"], "type": "t_11"},
+
+	    {"cx": 240, "cy": 20, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 140, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 180, "arrLine": [], "type": "t_6"}
+	],
+	"chart18": [
+	    {"cx": 10, "cy": 20, "arrLine": ["40:20","40:60"], "type": "t_1", "title": "Deep Convolutional Inverse Graphics Network(DCIGN)"},
+	    {"cx": 10, "cy": 60, "arrLine": ["40:20","40:60","40:100"], "type": "t_1"},
+	    {"cx": 10, "cy": 100, "arrLine": ["40:60","40:100","40:140"], "type": "t_1"},
+	    {"cx": 10, "cy": 140, "arrLine": ["40:100","40:140","40:180"], "type": "t_1"},
+	    {"cx": 10, "cy": 180, "arrLine": ["40:140","40:180"], "type": "t_1"},
+
+	    {"cx": 40, "cy": 20, "arrLine": ["80:40"], "type": "t_11"},
+	    {"cx": 40, "cy": 60, "arrLine": ["80:40","80:80"], "type": "t_11"},
+	    {"cx": 40, "cy": 100, "arrLine": ["80:80","80:120"], "type": "t_11"},
+	    {"cx": 40, "cy": 140, "arrLine": ["80:120","80:160"], "type": "t_11"},
+	    {"cx": 40, "cy": 180, "arrLine": ["80:160"], "type": "t_11"},
+
+	    {"cx": 80, "cy": 40, "arrLine": ["120:60"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 80, "cy": 80, "arrLine": ["120:60","120:100"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 80, "cy": 120, "arrLine": ["120:100","120:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 80, "cy": 160, "arrLine": ["120:140"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 120, "cy": 60, "arrLine": ["160:60","160:100","160:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 100, "arrLine": ["160:60","160:100","160:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 120, "cy": 140, "arrLine": ["160:60","160:100","160:140"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 160, "cy": 60, "arrLine": ["200:60","200:100","200:140"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 100, "arrLine": ["200:60","200:100","200:140"], "type": "t_4", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 140, "arrLine": ["200:60","200:100","200:140"], "type": "t_4", "typeSign": "typeCircle"},
+
+	    {"cx": 200, "cy": 60, "arrLine": ["240:40","240:80"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 100, "arrLine": ["240:80","240:120"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 200, "cy": 140, "arrLine": ["240:120","240:160"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 240, "cy": 40, "arrLine": ["280:20","280:60"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 240, "cy": 80, "arrLine": ["280:60","280:100"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 240, "cy": 120, "arrLine": ["280:100","280:140"], "type": "t_12", "typeSign": "typeCircle"},
+	    {"cx": 240, "cy": 160, "arrLine": ["280:140","280:180"], "type": "t_12", "typeSign": "typeCircle"},
+
+	    {"cx": 280, "cy": 20, "arrLine": ["310:20","310:60"], "type": "t_11"},
+	    {"cx": 280, "cy": 60, "arrLine": ["310:20","310:60","310:100"], "type": "t_11"},
+	    {"cx": 280, "cy": 100, "arrLine": ["310:60","310:100","310:140"], "type": "t_11"},
+	    {"cx": 280, "cy": 140, "arrLine": ["310:100","310:140","310:180"], "type": "t_11"},
+	    {"cx": 280, "cy": 180, "arrLine": ["310:140","310:180"], "type": "t_11"},
+
+	    {"cx": 310, "cy": 20, "arrLine": [], "type": "t_6"},
+	    {"cx": 310, "cy": 60, "arrLine": [], "type": "t_6"},
+	    {"cx": 310, "cy": 100, "arrLine": [], "type": "t_6"},
+	    {"cx": 310, "cy": 140, "arrLine": [], "type": "t_6"},
+	    {"cx": 310, "cy": 180, "arrLine": [], "type": "t_6"}
+	],
+	"chart19": [
+	    {"cx": 40, "cy": 60, "arrLine": ["80:60","80:100","80:140"], "type": "t_0", "typeSign": "typeCircle", "title": "Generative Adversarial Network (GAN)"},
+	    {"cx": 40, "cy": 100, "arrLine": ["80:60","80:100","80:140"], "type": "t_0", "typeSign": "typeCircle"},
+	    {"cx": 40, "cy": 140, "arrLine": ["80:60","80:100","80:140"], "type": "t_0", "typeSign": "typeCircle"},
+
+	    {"cx": 80, "cy": 60, "arrLine": ["120:60","120:100","120:140"], "type": "t_3"},
+	    {"cx": 80, "cy": 100, "arrLine": ["120:60","120:100","120:140"], "type": "t_3"},
+	    {"cx": 80, "cy": 140, "arrLine": ["120:60","120:100","120:140"], "type": "t_3"},
+
+	    {"cx": 120, "cy": 60, "arrLine": ["160:60","160:100","160:140"], "type": "t_3"},
+	    {"cx": 120, "cy": 100, "arrLine": ["160:60","160:100","160:140"], "type": "t_3"},
+	    {"cx": 120, "cy": 140, "arrLine": ["160:60","160:100","160:140"], "type": "t_3"},
+
+	    {"cx": 160, "cy": 60, "arrLine": ["200:60","200:100","200:140"], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 100, "arrLine": ["200:60","200:100","200:140"], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 160, "cy": 140, "arrLine": ["200:60","200:100","200:140"], "type": "t_7", "typeSign": "typeCircle"},
+
+	    {"cx": 200, "cy": 60, "arrLine": ["240:60","240:100","240:140"], "type": "t_3"},
+	    {"cx": 200, "cy": 100, "arrLine": ["240:60","240:100","240:140"], "type": "t_3"},
+	    {"cx": 200, "cy": 140, "arrLine": ["240:60","240:100","240:140"], "type": "t_3"},
+
+	    {"cx": 240, "cy": 60, "arrLine": ["280:80","280:120"], "type": "t_3"},
+	    {"cx": 240, "cy": 100, "arrLine": ["280:80","280:120"], "type": "t_3"},
+	    {"cx": 240, "cy": 140, "arrLine": ["280:80","280:120"], "type": "t_3"},
+
+	    {"cx": 280, "cy": 80, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"},
+	    {"cx": 280, "cy": 120, "arrLine": [], "type": "t_7", "typeSign": "typeCircle"}
+	],
+	"chart20": [
+	    {"cx": 80, "cy": 60, "arrLine": ["120:40","120:80"], "type": "t_1", "title": "Liquid State Macine (LSM)"},
+	    {"cx": 80, "cy": 100, "arrLine": ["120:40","120:80","120:120"], "type": "t_1"},
+	    {"cx": 80, "cy": 140, "arrLine": ["200:120","200:160"], "type": "t_1"},
+
+	    {"cx": 120, "cy": 40, "arrLine": ["160:40","160:80"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 120, "cy": 80, "arrLine": ["200:40","200:120","160:160"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:160"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 120, "cy": 160, "arrLine": ["240:80","160:160"], "type": "t_5", "typeSign": "typeTriangle"},
+
+	    {"cx": 160, "cy": 40, "arrLine": ["200:120"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:80","200:160"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 160, "cy": 120, "arrLine": [], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:120"], "type": "t_5", "typeSign": "typeTriangle"},
+
+	    {"cx": 200, "cy": 40, "arrLine": ["240:80"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 200, "cy": 80, "arrLine": ["240:80"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 200, "cy": 120, "arrLine": ["240:120"], "type": "t_5", "typeSign": "typeTriangle"},
+	    {"cx": 200, "cy": 160, "arrLine": ["240:120"], "type": "t_5", "typeSign": "typeTriangle"},
+
+	    {"cx": 240, "cy": 80, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 120, "arrLine": [], "type": "t_6"}
+	],
+	"chart21":[
+	    {"cx": 80, "cy": 60, "arrLine": ["120:40","120:80"], "type": "t_1", "title": "Extreme Learning Machine (ELM)"},
+	    {"cx": 80, "cy": 100, "arrLine": ["120:40","120:80","120:120"], "type": "t_1"},
+	    {"cx": 80, "cy": 140, "arrLine": ["200:120","200:160"], "type": "t_1"},
+
+	    {"cx": 120, "cy": 40, "arrLine": ["160:40","160:80"], "type": "t_3"},
+	    {"cx": 120, "cy": 80, "arrLine": ["200:40","200:120","160:160"], "type": "t_3"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:160"], "type": "t_3"},
+	    {"cx": 120, "cy": 160, "arrLine": ["240:80","160:160"], "type": "t_3"},
+
+	    {"cx": 160, "cy": 40, "arrLine": ["200:120"], "type": "t_3"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:80","200:160"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": [], "type": "t_3"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:120"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 40, "arrLine": ["240:80"], "type": "t_3"},
+	    {"cx": 200, "cy": 80, "arrLine": ["240:80"], "type": "t_3"},
+	    {"cx": 200, "cy": 120, "arrLine": ["240:120"], "type": "t_3"},
+	    {"cx": 200, "cy": 160, "arrLine": ["240:120"], "type": "t_3"},
+
+	    {"cx": 240, "cy": 80, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 120, "arrLine": [], "type": "t_6"}
+	],
+	"chart22":[
+	    {"cx": 80, "cy": 60, "arrLine": ["120:40","120:80"], "type": "t_1", "title": "Echo State Network (ESN)"},
+	    {"cx": 80, "cy": 100, "arrLine": ["120:40","120:80","120:120"], "type": "t_1"},
+	    {"cx": 80, "cy": 140, "arrLine": ["200:120","200:160"], "type": "t_1"},
+
+	    {"cx": 120, "cy": 40, "arrLine": ["160:40","160:80"], "type": "t_8"},
+	    {"cx": 120, "cy": 80, "arrLine": ["200:40","200:120","160:160"], "type": "t_8"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:160"], "type": "t_8"},
+	    {"cx": 120, "cy": 160, "arrLine": ["240:80","160:160"], "type": "t_8"},
+
+	    {"cx": 160, "cy": 40, "arrLine": ["200:120"], "type": "t_8"},
+	    {"cx": 160, "cy": 80, "arrLine": ["200:80","200:160"], "type": "t_8"},
+	    {"cx": 160, "cy": 120, "arrLine": [], "type": "t_8"},
+	    {"cx": 160, "cy": 160, "arrLine": ["200:120"], "type": "t_8"},
+
+	    {"cx": 200, "cy": 40, "arrLine": ["240:80"], "type": "t_8"},
+	    {"cx": 200, "cy": 80, "arrLine": ["240:80"], "type": "t_8"},
+	    {"cx": 200, "cy": 120, "arrLine": ["240:120"], "type": "t_8"},
+	    {"cx": 200, "cy": 160, "arrLine": ["240:120"], "type": "t_8"},
+
+	    {"cx": 240, "cy": 80, "arrLine": [], "type": "t_6"},
+	    {"cx": 240, "cy": 120, "arrLine": [], "type": "t_6"}
+	],
+	"chart23":[
+	    {"cx": 10, "cy": 80, "arrLine": ["40:80","40:120"], "type": "t_1", "title": "Deep Residual Network (DRN)"},
+	    {"cx": 10, "cy": 120, "arrLine": ["40:80","40:120"], "type": "t_1"},
+
+	    {"cx": 40, "cy": 80, "arrLine": ["80:80","80:120"], "type": "t_3", "typeSign": "typeLight"},
+	    {"cx": 40, "cy": 120, "arrLine": ["80:80","80:120"], "type": "t_3"},
+
+	    {"cx": 80, "cy": 80, "arrLine": ["120:80","120:120"], "type": "t_3"},
+	    {"cx": 80, "cy": 120, "arrLine": ["120:80","120:120"], "type": "t_3"},
+
+	    {"cx": 120, "cy": 80, "arrLine": ["160:80","160:120"], "type": "t_3", "typeSign": "typeLight"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:120"], "type": "t_3"},
+
+	    {"cx": 160, "cy": 80, "arrLine": ["200:80","200:120"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:80","200:120"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 80, "arrLine": ["240:80","240:120"], "type": "t_3", "typeSign": "typeLight"},
+	    {"cx": 200, "cy": 120, "arrLine": ["240:80","240:120"], "type": "t_3"},
+
+	    {"cx": 240, "cy": 80, "arrLine": ["280:80","280:120"], "type": "t_3"},
+	    {"cx": 240, "cy": 120, "arrLine": ["280:80","280:120"], "type": "t_3"},
+
+	    {"cx": 280, "cy": 80, "arrLine": ["310:80","310:120"], "type": "t_3"},
+	    {"cx": 280, "cy": 120, "arrLine": ["310:80","310:120"], "type": "t_3"},
+
+	    {"cx": 310, "cy": 80, "arrLine": [], "type": "t_6"},
+	    {"cx": 310, "cy": 120, "arrLine": [], "type": "t_6"}
+	],
+	"chart24":[
+	    {"cx": 100, "cy": 80, "arrLine": ["140:60","140:100","140:140","180:60","180:100","180:140","220:60","220:100","220:140"], "type": "t_1", "title": "Kohonen Network (KN)"},
+	    {"cx": 100, "cy": 120, "arrLine": ["140:60","140:100","140:140","180:60","180:100","180:140","220:60","220:100","220:140"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 60, "arrLine": [], "type": "t_3"},
+	    {"cx": 140, "cy": 100, "arrLine": [], "type": "t_3"},
+	    {"cx": 140, "cy": 140, "arrLine": [], "type": "t_3"},
+
+	    {"cx": 180, "cy": 60, "arrLine": [], "type": "t_3"},
+	    {"cx": 180, "cy": 100, "arrLine": [], "type": "t_3"},
+	    {"cx": 180, "cy": 140, "arrLine": [], "type": "t_3"},
+
+	    {"cx": 220, "cy": 60, "arrLine": [], "type": "t_3"},
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_3"},
+	    {"cx": 220, "cy": 140, "arrLine": [], "type": "t_3"}
+	],
+	"chart25":[
+	    {"cx": 100, "cy": 60, "arrLine": ["140:60"], "type": "t_1", "title": "Support Vector Machine (SVM)"},
+	    {"cx": 100, "cy": 100, "arrLine": ["140:100"], "type": "t_1"},
+	    {"cx": 100, "cy": 140, "arrLine": ["140:140"], "type": "t_1"},
+
+	    {"cx": 140, "cy": 60, "arrLine": ["180:60","180:100","180:140"], "type": "t_3"},
+	    {"cx": 140, "cy": 100, "arrLine": ["180:60","180:100","180:140"], "type": "t_3"},
+	    {"cx": 140, "cy": 140, "arrLine": ["180:60","180:100","180:140"], "type": "t_3"},
+
+	    {"cx": 180, "cy": 60, "arrLine": ["220:100"], "type": "t_3"},
+	    {"cx": 180, "cy": 100, "arrLine": ["220:100"], "type": "t_3"},
+	    {"cx": 180, "cy": 140, "arrLine": ["220:100"], "type": "t_3"},
+
+	    {"cx": 220, "cy": 100, "arrLine": [], "type": "t_6"}
+	],
+	"chart26":[
+	    {"cx": 80, "cy": 60, "arrLine": ["120:80","120:120"], "type": "t_1", "title": "Neural Turing Machine (NTM)"},
+	    {"cx": 80, "cy": 100, "arrLine": ["120:80","120:120"], "type": "t_1"},
+	    {"cx": 80, "cy": 140, "arrLine": ["120:80","120:120"], "type": "t_1"},
+
+	    {"cx": 120, "cy": 80, "arrLine": ["160:80","160:120"], "type": "t_3"},
+	    {"cx": 120, "cy": 120, "arrLine": ["160:80","160:120"], "type": "t_3"},
+
+	    {"cx": 160, "cy": 80, "arrLine": ["200:60","200:100","200:140"], "type": "t_3"},
+	    {"cx": 160, "cy": 120, "arrLine": ["200:60","200:100","200:140"], "type": "t_3"},
+
+	    {"cx": 200, "cy": 60, "arrLine": ["240:100","180:180","220:180","260:180"], "type": "t_3"},
+	    {"cx": 200, "cy": 100, "arrLine": ["240:100","180:180","220:180","260:180"], "type": "t_3"},
+	    {"cx": 200, "cy": 140, "arrLine": ["240:100","180:180","220:180","260:180"], "type": "t_3"},
+
+	    {"cx": 240, "cy": 100, "arrLine": [], "type": "t_6"},
+
+	    {"cx": 180, "cy": 180, "arrLine": [], "type": "t_9", "typeSign": "typeCircle"},
+	    {"cx": 220, "cy": 180, "arrLine": [], "type": "t_9", "typeSign": "typeCircle"},
+	    {"cx": 260, "cy": 180, "arrLine": [], "type": "t_9", "typeSign": "typeCircle"}
+	]
+}
