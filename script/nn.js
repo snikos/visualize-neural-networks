@@ -13,7 +13,7 @@ const svgNetwork = d3.select('.svgNetwork')
     .attr('height', CHART_HEIGHT)
     .classed('snw', true);
 
-let curArr = copy.chart2;
+let curArr = copy.chart23;
 
 function setColor(type){
 	const bgs = ['#f1c605','#f1c605','#f1c605',"#6cc805","#6cc805","#6cc805","#fe6500","#fe6500","#0298f7","#0298f7","#0298f7","#fe9bf6","#fe9bf6","#fe9bf6"];
@@ -37,15 +37,15 @@ function updateGrip(array){
 
 let groupLight= svgNetwork.append('g');
 function updateLight(array){
-    var arc = d3.arc().innerRadius(40).outerRadius(40);
+    var arc = d3.arc().innerRadius(50).outerRadius(50);
 
 	groupLight.selectAll('path')
 	    .data(array, d=>d)
 	    .join('path')
 	    .attr('class', 'light')
 	    .attr('d', arc({startAngle: 0, endAngle: -(Math.PI/2)}))
-	    .attr("transform", "translate(75,75)")
-		.attr('stroke', '#999')
+	    .attr("transform", (d) => `translate(${d[0]+40},${d[1]+30}) rotate(45)`)
+		.attr('stroke', '#999999')
 		.attr('stroke-width', 1)
 		.attr('fill', 'none');
 	
@@ -153,7 +153,6 @@ function showTypes(data){
 showTypes(copy.typesNN);
 
 function updateNet(){
-	let lineArray = [];
 	let lightArray= [];
 	let gripArray = [];
 	let circleArray = [];
@@ -171,14 +170,6 @@ function updateNet(){
 						copy[count].forEach( (nxt) => {
 							goPoint.push([el.cx, el.cy, nxt.cx, nxt.cy]);
 						});
-
-						/* for mixed */
-						copy[count].forEach( (elem, ix, a) => {
-							if( i === ix ){
-								//console.log([el.cx, el.cy, elem.cx, elem.cy])
-							}
-						});
-						
 					}
 					if( Array.isArray(el.arrLine) ) {
 						el.arrLine.forEach( (m) => {
@@ -202,11 +193,11 @@ function updateNet(){
 
     layer1.selectAll('circle')
 	    .data((d, i, j) => {
-	    	//let num = d3.entries(j)[i].key;
+	    	//let got = d3.entries(j)[i].key;
 	    	return d.map( (data, i, j ) => {
 	    	    return data
 	    	})
-	    	//return d.map( (d) => [d, num] );
+	    	//return d.map( (d) => [d, got] );
 	    })
 	    .join('circle')
         .attr('r', 10)
@@ -240,8 +231,7 @@ function updateNet(){
     groupCirc.selectAll('.layer1').exit().remove();
 
 	updateGrip(gripArray);
-	/*updateLight(lightArray);*/
-	//updateLine(lineArray);
+	updateLight(lightArray);
 	updateLine( nextStep(curArr) );
 	updateCircle(circleArray);
 	updateTriangle(triangleArray);
@@ -272,7 +262,7 @@ listLi.append('a')
     .style('cursor', 'pointer')
     .text(data => data)
     .attr('class', (d) => {
-    	if( d === 'chart2' ) return 'list-group-item active';
+    	if( d === 'chart23' ) return 'list-group-item active';
     	return'list-group-item ';
     })
     .on('click', (ev, data) => {
