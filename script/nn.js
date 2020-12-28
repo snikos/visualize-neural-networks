@@ -6,19 +6,12 @@ fetch('chart.json')
 const CHART_WIDTH = 320;
 const CHART_HEIGHT = 200;
 
-//const copy = json;
 const copy = res;
 const svgNetwork = d3.select('.svgNetwork')
     .select('svg')
     .attr('width', CHART_WIDTH)
     .attr('height', CHART_HEIGHT)
     .classed('snw', true);
-
-const groupGrip = svgNetwork.append('g');
-const groupLine = svgNetwork.append('g');
-const groupCirc = svgNetwork.append('g');
-const groupMoon = svgNetwork.append('g');
-const groupLight= svgNetwork.append('g');
 
 let curArr = copy.chart2;
 
@@ -27,8 +20,23 @@ function setColor(type){
 	return bgs[type.split('_')[1]];
 }
 
-function updateLight(array){
+let groupGrip = svgNetwork.append('g');
+function updateGrip(array){
+	groupGrip.selectAll('circle')
+		.data(array, data => data)
+		.join('circle')
+		.attr('r', 6)
+		.attr('cx', d=>d[0])
+		.attr('cy', d=>d[1]-10)
+		.attr('stroke-width', 1)
+		.attr('stroke', '#333333')
+		.attr('fill', 'none');
 
+	groupGrip.selectAll('circle').exit().remove();
+}
+
+let groupLight= svgNetwork.append('g');
+function updateLight(array){
     var arc = d3.arc().innerRadius(40).outerRadius(40);
 
 	groupLight.selectAll('path')
@@ -44,6 +52,7 @@ function updateLight(array){
 	groupLight.selectAll('path').exit().remove();
 }
 
+let groupLine = svgNetwork.append('g');
 function updateLine(array){
 	groupLine.selectAll('line')
 	    .data(array, d=>d)
@@ -53,27 +62,17 @@ function updateLine(array){
 	    .attr('y1', d=>d[1])
 	    .attr('x2', d=>d[2])
 	    .attr('y2', d=>d[3])
+	    //.transition( d => d )
+	    //.duration(500)
 	    .attr('stroke-width', 1)
 	    .attr('stroke', '#767676');
-	    //.attr('stroke', (d) => d.color);
 	
 	groupLine.selectAll('line').exit().remove();
 }
 
-function updateGrip(array){
-	groupGrip.selectAll('circle')
-		.data(array, data => data)
-		.join('circle')
-		.attr('r', 6)
-		.attr('cx', d=>d[0])
-		.attr('cy', d=>d[1]-10)
-		.attr('stroke-width', 1)
-		.attr('stroke', '#333333')
-		.attr('fill', 'none');
+let groupCirc= svgNetwork.append('g');
 
-	groupGrip.selectAll('circle').exit().remove();
-}
-
+let groupMoon = svgNetwork.append('g');
 function updateCircle(array){
 	groupMoon.selectAll('circle')
 		.data(array, data => data)
@@ -88,9 +87,10 @@ function updateCircle(array){
 	groupMoon.selectAll('circle').exit().remove();
 }
 
+const groupMoon2 = svgNetwork.append('g');
 function updateTriangle(array){
     let triangle = d3.symbol().type(d3.symbolTriangle);
-    groupMoon.selectAll('path')
+    groupMoon2.selectAll('path')
 		.data(array, data => data)
 		.join('path')
 	    .attr('d', triangle.size(60))
@@ -99,7 +99,7 @@ function updateTriangle(array){
 	    .attr('stroke', '#333333')
 	    .attr('fill', 'none');
 
-	groupMoon.selectAll('path').exit().remove();
+	groupMoon2.selectAll('path').exit().remove();
 }
 
 const typesBox = d3.select('#listTypes');
@@ -159,19 +159,58 @@ function updateNet(){
 	let circleArray = [];
 	let triangleArray = [];
 
-    groupCirc.selectAll('circle')
-	    .data(curArr, data => data)
+	let nextStep = function(array){
+		let count = 1;
+		let copy = array;
+		let goPoint= [];
+		copy.forEach( (arr, idx, what) => {
+			let len = what.length-1;
+			if( idx < len ){
+				arr.forEach( (el, i) => {
+					if( !Array.isArray(el.arrLine) && el.arrLine === 'mutation' ){
+						copy[count].forEach( (nxt) => {
+							goPoint.push([el.cx, el.cy, nxt.cx, nxt.cy]);
+						});
+
+						/* for mixed */
+						copy[count].forEach( (elem, ix, a) => {
+							if( i === ix ){
+								//console.log([el.cx, el.cy, elem.cx, elem.cy])
+							}
+						});
+						
+					}
+					if( Array.isArray(el.arrLine) ) {
+						el.arrLine.forEach( (m) => {
+				    		let x2 = +m.split(':')[0];
+				    		let y2 = +m.split(':')[1];
+				    		goPoint.push([el.cx, el.cy, x2, y2]);
+						})
+					}
+				});
+			}
+			count += 1;
+		});
+
+		return goPoint;
+	}
+
+	let layer1 = groupCirc.selectAll('.layer1')
+	    .data(curArr, (d) => d)
+	    .join('g')
+	    .attr('class', 'layer1');
+
+    layer1.selectAll('circle')
+	    .data((d, i, j) => {
+	    	//let num = d3.entries(j)[i].key;
+	    	return d.map( (data, i, j ) => {
+	    	    return data
+	    	})
+	    	//return d.map( (d) => [d, num] );
+	    })
 	    .join('circle')
-	    .attr('r', 10)
-	    .attr('class', 'circles')
-	    .attr('cx', (d) => {
-	    	if(!!d.arrLine){
-		    	d.arrLine.forEach( (el) => {
-		    		let x2 = +el.split(':')[0];
-		    		let y2 = +el.split(':')[1];
-		    		lineArray.push([d.cx, d.cy, x2, y2]);
-		    	});
-		    }
+        .attr('r', 10)
+        .attr('cx', (d) => {
 		    if(!!d.typeSign){
 		    	let srType = (text) => {
 		    		let word = d.typeSign;
@@ -190,25 +229,24 @@ function updateNet(){
 	    			gripArray.push([d.cx,d.cy]);
 	    		}
 		    }
-	    	return d.cx;
-	    })
-	    .attr('cy', (d) => {
-	    	return d.cy;
-	    })
-	    .attr('fill', (d) => {
-	    	return (!!d.type) ? setColor(d.type) : '#919191';
-	    })
-	    //.attr('fill', (data) => data.color);
+        	return d.cx;
+        })
+        .attr('cy', (d) => d.cy)
+        .attr('fill', (d) => {
+        	return (!!d.type) ? setColor(d.type) : '#919191';
+        })
+        .classed('circ', true);
 
-	    groupCirc.selectAll('circle').exit().remove();
+    groupCirc.selectAll('.layer1').exit().remove();
 
 	updateGrip(gripArray);
-	//updateLight(lightArray);
-	updateLine(lineArray);
+	/*updateLight(lightArray);*/
+	//updateLine(lineArray);
+	updateLine( nextStep(curArr) );
 	updateCircle(circleArray);
 	updateTriangle(triangleArray);
 
-	titleDesc.textContent = ( curArr[0]['title'] );
+	titleDesc.textContent = ( curArr[0][0]['title'] );
 }
 
 updateNet();
