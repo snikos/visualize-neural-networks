@@ -1,6 +1,13 @@
 "use strict";
+
+function failed(err){
+	console.log(err);
+	titleDesc.innerHTML = '<p class="text-error">Fetch failed loading data</p>';
+	return null;
+}
+
 fetch('chart.json')
-  .then( data => data.json() )
+  .then( data => data.json(), err => failed(err) )
   .then( res => {
 
 const CHART_WIDTH = 320;
@@ -300,4 +307,4 @@ function coordLines(){
 	    .attr('stroke-width', 0.4)
 	    .attr('stroke', '#767676');
 }
-  });
+  }, err => failed(err));

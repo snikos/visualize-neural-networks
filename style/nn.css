@@ -3,6 +3,9 @@ section{
 	outline: 1px solid #ccc;
 }
 
+.text-error{
+  color: tomato;
+}
 .snw{
   display: block;
   margin: 0 auto;
