@@ -7,9 +7,13 @@ function failed(err){
 }
 
 fetch('chart.json')
-  .then( data => data.json(), err => failed(err) )
+  .then( data => {
+  	console.log('File id loaded');
+  	return data.json();
+  }, err => failed(err) )
   .then( res => {
 
+console.log('procBegin');
 const CHART_WIDTH = 320;
 const CHART_HEIGHT = 200;
 
@@ -307,4 +311,11 @@ function coordLines(){
 	    .attr('stroke-width', 0.4)
 	    .attr('stroke', '#767676');
 }
-  }, err => failed(err));
+
+console.log('procEnd');
+  }, err => failed(err))
+.finally( () =>
+  {
+  console.log( 'finall' )
+  }
+);
